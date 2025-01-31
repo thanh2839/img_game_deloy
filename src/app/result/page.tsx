@@ -16,7 +16,7 @@ const Result = () => {
 
   useEffect(() => {
     // Retrieve data from localStorage when component mounts
-    const savedName = localStorage.getItem('name') || '';
+    const savedName = localStorage.getItem('ten') || '';
     const savedAvatar = localStorage.getItem('uploadedImageUrl') || '';
     
     setUserData({
@@ -48,7 +48,7 @@ const Result = () => {
         <div className="mb-6 text-center text-gray-700">
           <p>
             Mừng năm mới Quý Tỵ, Bảo tàng Dân tộc học xin gửi lời chúc tốt đẹp nhất đến{' '}
-            <strong>{userData.name}</strong>. Mong quý khách sẽ có một năm mới thật nhiều 
+            <strong className="text-2xl">{userData.name}</strong>. Mong quý khách sẽ có một năm mới thật nhiều 
             niềm vui và may mắn!
           </p>
         </div>
