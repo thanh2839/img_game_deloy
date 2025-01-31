@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import './styles.css'; // Giả sử CSS được lưu trong styles.css
 
 type User = {
