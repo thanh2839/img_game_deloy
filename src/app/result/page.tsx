@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import './styles.css'
 
 type UserData = {
   name: string;
@@ -23,17 +24,6 @@ const Result = () => {
       avatarUrl: savedAvatar
     });
   }, []);
-
-  const images = [
-    { src: '/img/1.png', alt: 'Cây nêu' },
-    { src: '/img/2.png', alt: 'Đèn lồng' },
-    { src: '/img/3.png', alt: 'Hoa đào' },
-    { src: '/img/4.png', alt: 'Lì xì' },
-    { src: '/img/5.png', alt: 'Mặt nạ' },
-    { src: '/img/6.png', alt: 'Hạt dưa' },
-    { src: '/img/7.png', alt: 'Quýt' },
-    { src: '/img/8.png', alt: 'Pháo hoa' }
-  ];
 
   return (
     <div className="flex min-h-screen items-center justify-center p-4">
@@ -63,29 +53,43 @@ const Result = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <div className="grid grid-cols-4 gap-4">
-            {images.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg">
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="h-full w-full object-cover transition-transform hover:scale-110"
-                />
-              </div>
-            ))}
+        <div className="rotating-gallery-container">
+          <div className="rotating-gallery">
+            <div className="rotating-item">
+              <img src="/img/1.png" alt="Cây nêu" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/2.png" alt="Đèn lồng" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/3.png" alt="Hoa đào" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/4.png" alt="Lì xì" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/5.png" alt="Mặt nạ" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/6.png" alt="Hạt dưa" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/7.png" alt="Quýt" />
+            </div>
+            <div className="rotating-item">
+              <img src="/img/8.png" alt="Pháo hoa" />
+            </div>
           </div>
 
-          {userData.avatarUrl && (
-            <div className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-4 border-red-600">
-              <img
-                src={userData.avatarUrl}
-                alt="Avatar người chơi"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          )}
+          <div className="player-avatar">
+            {userData.avatarUrl ? (
+              <img src={userData.avatarUrl} alt="Avatar người chơi" className="rounded-full w-32 h-32 object-cover" />
+            ) : (
+              <div>Không có avatar</div>
+            )}
+          </div>
         </div>
+
       </div>
     </div>
   );
