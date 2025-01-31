@@ -11,20 +11,14 @@ interface ResultCardProps {
   user: User;
 }
 
-const ResultCard: React.FC<ResultCardProps> = ({ user }) => {
-  const [currentUser, setCurrentUser] = useState<User>(user);
+const ResultCard: React.FC<ResultCardProps> = () => {
 
   // Sử dụng useEffect để lấy dữ liệu từ localStorage khi component mount
   useEffect(() => {
     const savedName = localStorage.getItem('name');
     const savedAvatar = localStorage.getItem('avatar');
 
-    if (savedName && savedAvatar) {
-      setCurrentUser({
-        name: savedName,
-        avatar: savedAvatar,
-      });
-    }
+
   }, []); // Chạy một lần khi component được render lần đầu tiên
 
   return (
