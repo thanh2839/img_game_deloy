@@ -2,10 +2,10 @@
 // import React, { useEffect } from 'react';
 import './styles.css'; // Giả sử CSS được lưu trong styles.css
 
-type User = {
-  name: string;
-  avatar: string;
-};
+// type User = {
+//   name: string;
+//   avatar: string;
+// };
 
 
 
