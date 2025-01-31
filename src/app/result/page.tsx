@@ -1,23 +1,24 @@
 'use client';
-// import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css'; // Giả sử CSS được lưu trong styles.css
 
-// type User = {
-//   name: string;
-//   avatar: string;
-// };
-
-
-
 const Result = () => {
+  const [name, setName] = useState('');
+  const [avatar, setAvatar] = useState('');
 
   // Sử dụng useEffect để lấy dữ liệu từ localStorage khi component mount
-//   useEffect(() => {
-//     const savedName = localStorage.getItem('name');
-//     const savedAvatar = localStorage.getItem('avatar');
-
-
-//   }, []); // Chạy một lần khi component được render lần đầu tiên
+  useEffect(() => {
+    const savedName = localStorage.getItem('name');
+    const savedAvatar = localStorage.getItem('avatar');
+    
+    if (savedName) {
+      setName(savedName);
+    }
+    
+    if (savedAvatar) {
+      setAvatar(savedAvatar);
+    }
+  }, []); // Chạy một lần khi component được render lần đầu tiên
 
   return (
     <div className="container">
@@ -35,7 +36,7 @@ const Result = () => {
         <div className="player-name" id="player-name">
           <p>
             Mừng năm mới Quý Tỵ, Bảo tàng Dân tộc học xin gửi lời chúc tốt đẹp nhất đến{' '}
-            <strong>{localStorage.getItem('name')}</strong>. Mong quý khách sẽ có một năm mới thật nhiều niềm vui và may mắn !!!
+            <strong>{name}</strong>. Mong quý khách sẽ có một năm mới thật nhiều niềm vui và may mắn !!!
           </p>
         </div>
 
@@ -64,9 +65,14 @@ const Result = () => {
           <div className="rotating-item">
             <img src="/img/8.png" alt="Pháo hoa" />
           </div>
-          <div className="player-avatar">
-            <img src={`${localStorage.getItem('uploadedImageUrl')}`} alt="Avatar người chơi" />
-          </div>
+        </div>
+
+        <div className="player-avatar">
+          {avatar ? (
+            <img src={avatar} alt="Avatar người chơi" />
+          ) : (
+            <div>Không có avatar</div>
+          )}
         </div>
       </div>
     </div>
