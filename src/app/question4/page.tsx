@@ -33,7 +33,6 @@ const mockData = [
 const Question4 = () => {
   const router = useRouter();
   const [selectedItems, setSelectedItems] = useState<Set<number>>(new Set());
-  const [isLoading, setIsLoading] = useState(false);
   const [imageError, setImageError] = useState<Record<number, boolean>>({});
 
   const handleSelect = (id: number) => {
