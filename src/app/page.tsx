@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image'; // Importing Image component from Next.js
 
 const GameRegister = () => {
   const router = useRouter();
@@ -48,8 +49,8 @@ const GameRegister = () => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    localStorage.setItem('ten', formData.name)
-    console.log(localStorage.getItem('ten'))
+    localStorage.setItem('ten', formData.name);
+    console.log(localStorage.getItem('ten'));
     e.preventDefault();
     if (validateForm()) {
       console.log('Form Data:', { ...formData, imageUrl });
@@ -97,7 +98,13 @@ const GameRegister = () => {
               onClick={() => document.getElementById('avatar')?.click()}
             >
               {preview ? (
-                <img src={preview} alt="Avatar" className="w-full h-full object-cover" />
+                <Image
+                  src={preview}
+                  alt="Avatar"
+                  className="w-full h-full object-cover"
+                  width={112} // Adjust the width
+                  height={112} // Adjust the height
+                />
               ) : (
                 <span className="text-3xl">📷</span>
               )}
