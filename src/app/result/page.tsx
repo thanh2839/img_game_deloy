@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './styles.css'; // Giả sử CSS được lưu trong styles.css
 
 type User = {
@@ -14,12 +14,12 @@ interface ResultCardProps {
 const ResultCard: React.FC<ResultCardProps> = () => {
 
   // Sử dụng useEffect để lấy dữ liệu từ localStorage khi component mount
-  useEffect(() => {
-    const savedName = localStorage.getItem('name');
-    const savedAvatar = localStorage.getItem('avatar');
+//   useEffect(() => {
+//     const savedName = localStorage.getItem('name');
+//     const savedAvatar = localStorage.getItem('avatar');
 
 
-  }, []); // Chạy một lần khi component được render lần đầu tiên
+//   }, []); // Chạy một lần khi component được render lần đầu tiên
 
   return (
     <div className="container">
