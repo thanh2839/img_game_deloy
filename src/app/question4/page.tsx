@@ -10,22 +10,22 @@ import { CheckCircle2 } from 'lucide-react';
 const mockData = [
   { 
     id: 1, 
-    src: '/images/câu 4.3.jpg', 
+    src: '/images/cau4.3.jpg', 
     alt: 'Đồ vật 1' 
   },
   { 
     id: 2, 
-    src: '/images/câu 4.4.jpg', 
+    src: '/images/cau4.4.JPG', 
     alt: 'Đồ vật 2' 
   },
   { 
     id: 3, 
-    src: '/images/câu 4.5.jpg', 
+    src: '/images/cau4.5.JPG', 
     alt: 'Đồ vật 3' 
   },
   { 
     id: 4, 
-    src: '/images/câu 4.6.jpg', 
+    src: '/images/cau4.6.jpg', 
     alt: 'Đồ vật 4' 
   },
 ];

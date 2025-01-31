@@ -8,15 +8,15 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react';
 
 const mockData = [
-  { id: 1, src: '/images/câu 2.1.jpg', alt: 'Đồ vật 1' },
-  { id: 2, src: '/images/câu 2.2.jpg', alt: 'Đồ vật 2' },
-  { id: 3, src: '/images/câu 2.3.jpg', alt: 'Đồ vật 3' },
-  { id: 4, src: '/images/câu 2.4.jpg', alt: 'Đồ vật 4' },
-  { id: 5, src: '/images/câu 2.5.jpg', alt: 'Đồ vật 5' },
-  { id: 6, src: '/images/câu 2.6.jpg', alt: 'Đồ vật 6' },
-  { id: 7, src: '/images/câu 2.7.jpg', alt: 'Đồ vật 7' },
-  { id: 8, src: '/images/câu 2.8.jpg', alt: 'Đồ vật 8' },
-  { id: 9, src: '/images/câu 2.9.jpg', alt: 'Đồ vật 9' },
+  { id: 1, src: '/images/cau2.1.JPG', alt: 'Đồ vật 1' },
+  { id: 2, src: '/images/cau2.2.JPG', alt: 'Đồ vật 2' },
+  { id: 3, src: '/images/cau2.3.JPG', alt: 'Đồ vật 3' },
+  { id: 4, src: '/images/cau2.4.JPG', alt: 'Đồ vật 4' },
+  { id: 5, src: '/images/cau2.5.JPG', alt: 'Đồ vật 5' },
+  { id: 6, src: '/images/cau2.6.JPG', alt: 'Đồ vật 6' },
+  { id: 7, src: '/images/cau2.7.JPG', alt: 'Đồ vật 7' },
+  { id: 8, src: '/images/cau2.8.JPG', alt: 'Đồ vật 8' },
+  { id: 9, src: '/images/cau2.9.JPG', alt: 'Đồ vật 9' },
 ];
 
 const Question2 = () => {
