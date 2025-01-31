@@ -7,11 +7,9 @@ type User = {
   avatar: string;
 };
 
-interface ResultCardProps {
-  user: User;
-}
 
-const ResultCard: React.FC<ResultCardProps> = () => {
+
+const Result = () => {
 
   // Sử dụng useEffect để lấy dữ liệu từ localStorage khi component mount
 //   useEffect(() => {
@@ -75,4 +73,4 @@ const ResultCard: React.FC<ResultCardProps> = () => {
   );
 };
 
-export default ResultCard;
+export default Result;
