@@ -19,7 +19,6 @@ interface NewYearCardProps {
 const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
   const [message, setMessage] = useState('');
   const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sendDataUser = async () => {
     try {
@@ -53,8 +52,7 @@ const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
     e.preventDefault();
     
     if (!message.trim()) return;
-    
-    setIsSubmitting(true);
+
     try {
       const success = await sendDataUser();
       if (success) {
@@ -64,9 +62,7 @@ const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
       }
     } catch (error) {
       console.error('Error in form submission:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    } 
   };
 
   return (

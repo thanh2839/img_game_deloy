@@ -2,17 +2,17 @@
 
 import React, { useEffect, useState } from 'react';
 import './styles.css'
-import { Dancing_Script, Playfair_Display } from 'next/font/google';
+import { Dancing_Script } from 'next/font/google';
 import { getRandomWish } from './randomWish';
 const dancingScript = Dancing_Script({
   subsets: ['latin'],
   weight: ['400', '700'],
 });
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
+// const playfair = Playfair_Display({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+// });
 
 type UserData = {
   name: string;
