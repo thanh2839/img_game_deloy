@@ -1,4 +1,4 @@
-// components/NewYearCard.tsx
+// src/app/message/page.tsx
 'use client'
 import { FormEvent, useState } from 'react';
 import { Dancing_Script } from 'next/font/google';
@@ -11,17 +11,13 @@ const dancingScript = Dancing_Script({
   weight: ['400', '700'],
 });
 
-interface NewYearCardProps {
-  onSubmit?: (message: string) => void;
-}
-
-const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
+export default function MessagePage() {
   const [message, setMessage] = useState('');
   const router = useRouter();
 
   const sendDataUser = async () => {
     try {
-      const dbRef = ref(db, 'dataUser'); // Reference to 'testData' in the database
+      const dbRef = ref(db, 'dataUser');
       await set(dbRef, {
         name: localStorage.getItem('ten'),
         sdt: localStorage.getItem('sdt'),
@@ -39,8 +35,6 @@ const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
 
   const handleNext = () => {
     try {
-      // const selectedAnswers = Array.from(selectedItems);
-      // localStorage.setItem('question2Answers', JSON.stringify(selectedAnswers));
       router.push('/result');
     } catch (error) {
       console.error('Navigation error:', error);
@@ -55,7 +49,6 @@ const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
     try {
       const success = await sendDataUser();
       if (success) {
-        onSubmit?.(message);
         setMessage('');
         handleNext();
       }
@@ -112,6 +105,4 @@ const NewYearCard: React.FC<NewYearCardProps> = ({ onSubmit }) => {
       </div>
     </div>
   );
-};
-
-export default NewYearCard;
+}
