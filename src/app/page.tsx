@@ -51,6 +51,8 @@ const GameRegister = () => {
   const handleSubmit = (e: React.FormEvent) => {
     localStorage.setItem('ten', formData.name);
     console.log(localStorage.getItem('ten'));
+    localStorage.setItem('sdt', formData.sdt);
+    console.log(localStorage.getItem('sdt'));
     e.preventDefault();
     if (validateForm()) {
       console.log('Form Data:', { ...formData, imageUrl });

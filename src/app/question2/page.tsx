@@ -46,8 +46,8 @@ const Question2 = () => {
 
   const handleNext = () => {
     try {
-      const selectedAnswers = Array.from(selectedItems);
-      localStorage.setItem('question2Answers', JSON.stringify(selectedAnswers));
+      // const selectedAnswers = Array.from(selectedItems);
+      // localStorage.setItem('question2Answers', JSON.stringify(selectedAnswers));
       router.push('/question3');
     } catch (error) {
       console.error('Navigation error:', error);

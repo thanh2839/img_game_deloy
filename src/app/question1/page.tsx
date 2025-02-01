@@ -68,8 +68,8 @@ const Question1 = () => {
   const handleNext = () => {
     try {
       // Store the selected answers
-      const selectedAnswers = Array.from(selectedItems);
-      localStorage.setItem('question1Answers', JSON.stringify(selectedAnswers));
+      // const selectedAnswers = Array.from(selectedItems);
+      // localStorage.setItem('question1Answers', JSON.stringify(selectedAnswers));
       
       // Navigate to question 2
       router.push('/question2');

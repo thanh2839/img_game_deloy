@@ -20,7 +20,7 @@ const mockData = [
   },
   { 
     id: 3, 
-    src: '/images/cau5.3.jpg', 
+    src: '/images/cau5.11.jpg', 
     alt: 'Đồ vật 3' 
   },
   { 
@@ -37,6 +37,36 @@ const mockData = [
     id: 6, 
     src: '/images/cau5.6.jpg', 
     alt: 'Đồ vật 6' 
+  },
+  { 
+    id: 7, 
+    src: '/images/cau5.7.jpg', 
+    alt: 'Đồ vật 7' 
+  },
+  { 
+    id: 8, 
+    src: '/images/cau5.8.jpg', 
+    alt: 'Đồ vật 8' 
+  },
+  { 
+    id: 9, 
+    src: '/images/cau5.9.jpg', 
+    alt: 'Đồ vật 9' 
+  },
+  { 
+    id: 10, 
+    src: '/images/cau5.10.jpg', 
+    alt: 'Đồ vật 10' 
+  },
+  { 
+    id: 11, 
+    src: '/images/cau5.3.jpg', 
+    alt: 'Đồ vật 11' 
+  },
+  { 
+    id: 12, 
+    src: '/images/cau5.12.jpg', 
+    alt: 'Đồ vật 12' 
   },
 ];
 
@@ -72,7 +102,7 @@ const Question1 = () => {
       localStorage.setItem('question1Answers', JSON.stringify(selectedAnswers));
       
       // Navigate to question 2
-      router.push('/result');
+      router.push('/message');
       
     } catch (error) {
       console.error('Navigation error:', error);
@@ -93,7 +123,7 @@ const Question1 = () => {
             Đã chọn: <span className="font-medium">{selectedItems.size}</span>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
             {mockData.map((item) => (
               <button
                 key={item.id}
