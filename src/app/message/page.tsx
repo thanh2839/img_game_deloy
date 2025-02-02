@@ -63,7 +63,7 @@ export default function MessagePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/images/bg.png"
+            src="https://res.cloudinary.com/dsymtu3j5/image/upload/v1738458906/csxj6xg8hiyya8jbeadx.png"
             alt="Background"
             className="w-full h-full object-cover"
           />

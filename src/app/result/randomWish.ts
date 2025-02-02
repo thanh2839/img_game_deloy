@@ -15,6 +15,7 @@ const wishes: Wish[] = [
     { text: "Nhẫn", weight: 5 },
     { text: "Thành", weight: 1 },
     { text: "Đắc", weight: 2 },
+    { text: "Duyên", weight: 2 },
 ];
 
 const getRandomWish = (): string => {
